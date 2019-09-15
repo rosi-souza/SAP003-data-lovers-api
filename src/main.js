@@ -11,12 +11,15 @@ POKEMONS.map(poke => img.innerHTML += `
 <img src=" ${poke.img}"/>
 </div>`);*/
 
-const personagens = POKEMON.pokemon;
-const showPokemons = document.getElementById("main");
+let personagens = POKEMON.pokemon;
 
-for (pokemons of personagens) {
-showPokemons.innerHTML += `
-<div id="pokemon" class="pokeCard">
+function carregarPokemon() {
+
+    const showPokemons = document.getElementById("main");
+    showPokemons.innerHTML = "";
+    for (pokemons of personagens) {
+        showPokemons.innerHTML += `
+<div id="pokemon" class="poke-card">
 
 <div>
 ${pokemons.name}
@@ -24,7 +27,33 @@ ${pokemons.name}
 
 <img src ="${pokemons.img}"/>
 </div>`;
+
+    };
+}
+
+carregarPokemon()
+
+function filtrarPorTipo (types){
+  let pokeTipos = []
+  for (let index = 0; index < types.length; index++) {
+    const type = types[index]; 
+    personagens = POKEMON.pokemon;
+    personagens.map(function (personagem){
+        if (personagem.type.includes(type)) {
+            pokeTipos.push(personagem)         
+        }
+        
+    });
+    
+    //console.log(pokemonSelecionado.name)
+  }
+  personagens = pokeTipos 
+  carregarPokemon()
 };
+
+
+
+
 
 
 
