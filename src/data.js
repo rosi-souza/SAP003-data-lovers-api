@@ -1,23 +1,48 @@
-// esta é uma função de exemplo
-// veja como agregamos a função ao objeto global window
 
-const example = () => {
-  return "example";
-};
+//personagem = fetch('../src/data/pokemon/pokemon.json').then(function(response) {
+ //    return response.json();
+ //   });
+ 
+ let personagens = POKEMON.pokemon;
 
-window.example = example;
-
-
-document.getElementById("filter").addEventListener('click', function(){
-  const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element){
-    return element.value
-  })
-  filtrarPorTipo(types)
-     }
-);
-
-
-
+ function carregarPokemon() {
+ 
+     const showPokemons = document.getElementById("main");
+     showPokemons.innerHTML = "";
+     for (pokemons of personagens) {
+         showPokemons.innerHTML += `
+ <div id="pokemon" class="poke-card">
+ 
+ <div>
+ ${pokemons.name}
+ </div>
+ 
+ <img src ="${pokemons.img}"/>
+ </div>`;
+ 
+     };
+ }
+ 
+ carregarPokemon()
+ 
+ function filtrarPorTipo (types){
+   let pokeTipos = []
+   for (let i = 0; i < types.length; i++) {
+     const type = types[i]; 
+     personagens = POKEMON.pokemon;
+     personagens.map(function (personagem){
+         if (personagem.type.includes(type)) {
+             pokeTipos.push(personagem)         
+         }
+         
+     });     
+    }
+   personagens = pokeTipos 
+   carregarPokemon()
+ };
+ 
+ 
+ 
 
 
 
