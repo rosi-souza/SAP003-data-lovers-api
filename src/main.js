@@ -7,12 +7,16 @@ function carregarPokemon() {
     for (pokemons of personagens) {
         showPokemons.innerHTML += `
 <div id="pokemon" class="poke-card">
-
+<div class="infos">
+<img src ="${pokemons.img}"/>
 <div>
+<p>Nome:</p>
 ${pokemons.name}
 </div>
-
-<img src ="${pokemons.img}"/>
+<p>Tipo:</p>
+${pokemons.type}
+<p>Fraquezas:</p>
+${pokemons.weaknesses}
 </div>`;
 
     };
@@ -20,21 +24,22 @@ ${pokemons.name}
 
 carregarPokemon()
 
-function filtrarPorTipo (types){
-  let pokeTipos = []
-  for (let i = 0; i < types.length; i++) {
-    const type = types[i]; 
-    personagens = POKEMON.pokemon;
-    personagens.map(function (personagem){
-        if (personagem.type.includes(type)) {
-            pokeTipos.push(personagem)         
-        }
-        
-    });     
-   }
-  personagens = pokeTipos 
-  carregarPokemon()
-};
+
+document.getElementById("filter").addEventListener('click', function(){
+  const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element){
+    return element.value
+  })
+  filtrarPorTipo(types)
+     }
+);
+
+document.getElementById("ordenarPokemons").addEventListener('change', function(){
+  const ordem = Array.from(document.querySelectorAll("#ordenarPokemons")).map(function (element){
+    return element.value
+  })
+  selectOrderPokemon(ordem)
+     }
+);
 
 function selectOrderPokemon() {
   let orderPokemon = document.getElementById("ordenarPokemons").value;
@@ -42,12 +47,10 @@ function selectOrderPokemon() {
   carregarPokemon(orderList);
 }
 
-//function searchPokemon () {
-//  let searchPoke = document.getElementById("main")        
-// }
 
-  
 
+
+ 
 
 
 

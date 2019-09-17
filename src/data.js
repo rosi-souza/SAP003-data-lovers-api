@@ -1,10 +1,19 @@
-document.getElementById("filter").addEventListener('click', function(){
-    const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element){
-      return element.value
-    })
-    filtrarPorTipo(types)
-       }
-  );
+function filtrarPorTipo (types){
+    let pokeTipos = []
+    for (let i = 0; i < types.length; i++) {
+      const type = types[i]; 
+      personagens = POKEMON.pokemon;
+      personagens.map(function (personagem){
+          if (personagem.type.includes(type)) {
+              pokeTipos.push(personagem)         
+          }
+          
+      });     
+     }
+    personagens = pokeTipos 
+    carregarPokemon()
+  };
+
 
   window.ordenPokemons = ordenPokemons;
 
@@ -14,7 +23,7 @@ function ordenPokemons(orderPokemon) {
 
   switch (orderPokemon){
   case "a-z":
-    orderList = personagens.sort((a, b) => {
+    personagens.sort((a, b) => {
   if (a.name > b.name) {
     return 1;
   }
@@ -33,11 +42,12 @@ function ordenPokemons(orderPokemon) {
  }
 };
 
- // const pokeSearch = document.querySelector(".pokeSearch");
-  //pokeSearch.addEventListener('click', () => {
+
+  //const ordenar = document.getElementById(ordenarPokemons);
+ // ordenar.addEventListener('change', () => {
      
   
-  });
+  //});
   
  
   //document.getElementById("pokeSearch").addEventListener('click', function () {
