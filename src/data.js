@@ -22,7 +22,7 @@ function ordenPokemons(orderPokemon) {
   let orderList = [];
 
   switch (orderPokemon){
-  case "a-z":
+  case "a-z": 
     personagens.sort((a, b) => {
   if (a.name > b.name) {
     return 1;
@@ -30,7 +30,7 @@ function ordenPokemons(orderPokemon) {
   return -1;
 });
     break;
-  case "z-a":
+  case "z-a": console.log(personagensAgrupados)
     personagens.sort((a, b) => {
   if (a.name > b.name) {
     return 1;
@@ -41,6 +41,7 @@ function ordenPokemons(orderPokemon) {
     break;
  }
 };
+
 
 
   //const ordenar = document.getElementById(ordenarPokemons);
@@ -55,9 +56,26 @@ function ordenPokemons(orderPokemon) {
  // };
  //     console.log(getPokemon)
   //});
-
-
-
-
+  
+  
+  
+  /*const personagensAgrupados = .reduce(function(
+    valorAcumulador, valorPokemon){   
+  if (valorPokemon.type === "fire") {
+    return valorAcumulador + valorPokemon.value;   
+  } 0;
+  console.log(personagensAgrupados)
+    });*/
+  
+  //valorAcumulador[typePoke].push(valorPokemon);
+  
+  //return valorAcumulador;
+    //}, {typefire: []});
+    
+  
+  
+   // if(record.gender == 'BOYS') return sum + record.value; 
+///  }, 0);
+//}
 
 

@@ -1,7 +1,17 @@
-body {
-    background-color:mediumaquamarine;
-  
+@media screen and (max-width: 480px) {
+  .menu, #principal, .poke-card{
+    float: right;
+    width: 100%;
+    margin-right:0;
   }
+}
+
+
+body {
+  background-color: aquamarine;
+    
+  }
+
   body:after{
      opacity: 0.5;
   }
@@ -10,16 +20,40 @@ body {
     display: block;    
     margin-left: auto;    
     margin-right: auto;
+    margin-top: 50px;
+    
    }
 
+
 .poke-card {
-    background-color: yellow;
+    background-color: #f7ff5bf2;
     display: inline-block;
-    padding: 0.5%;
-    margin: 1%;
+    padding: 1%;
+    margin: 4%;
     margin-left: auto;
-    margin-right: auto;    
-}
+    margin-right: auto;  
+    text-align: center;
+    font-style: normal;
+    font-weight: bolder;
+    width: 300px;    
+    margin: 3%;
+    padding: 1%;
+    border: 2px solid;
+     }  
+
+  #principal{
+    margin-left: 300px;
+    display: flow-root; 
+    margin-top: 100px;
+
+  }
+
+    .menu{
+      float: left;
+      margin-top: 135px;
+      margin-left: 30px;
+    }
+ 
 
 
 
