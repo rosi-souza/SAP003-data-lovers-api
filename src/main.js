@@ -33,7 +33,8 @@ document.getElementById("filter").addEventListener('click', function(){
     const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element){
       return element.value
     })
-    filtrarPorTipo(types)
+    filtrarPorTipo(POKEMON.pokemon, types)    
+       
        }
   );
 
@@ -50,6 +51,7 @@ function selectOrderPokemon() {
   let orderList = window.ordenPokemons(orderPokemon);
   carregarPokemon(orderList);
 }
+
 
 /*const pokeSoma = document.getElementsByClassName(type)
 . filtrarPorTipo(personagens => pokeSoma.type === "fire")
