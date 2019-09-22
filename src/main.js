@@ -30,7 +30,10 @@ carregarPokemon()
 
 
 document.getElementById("filter").addEventListener('click', function(){
-    const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element){
+    const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element){ 
+      //foi criado um array no qual estão os pokemon filtrados, a partir do array onde estão todos os pokemon
+      //queryselectorall retornou uma lista com os elementos especificados(tipos checados pelo usuário)
+      // map foi chamado para buscar o tipo dentro desse novo array
       return element.value
     })
     filtrarPorTipo(POKEMON.pokemon, types)    

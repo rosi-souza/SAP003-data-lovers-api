@@ -1,18 +1,27 @@
 
+/*function filtrarPorTipo(pokemon, types){
+  return pokemon.filter(item => item.type.includes(types));
+  
+}
+
+const app = {
+  filtrarPorTipo
+};*/
+
 function filtrarPorTipo(pokemon, types) { 
   // 
-  let pokeTipos = []
-    for (let i = 0; i < types.length; i++) {
-      const type = types[i]; 
-        pokemon.map(function (personagem){
-          if (personagem.type.includes(type)) {
-              pokeTipos.push(personagem)         
+  let pokeTipos = [] // recebe/adiciona o pokemon filtrado
+    for (let i = 0; i < types.length; i++) { //entra no array que guarda os tipos de pokemon
+        const type = types[i]; 
+        pokemon.map(function (personagem){ //procura dentro do "for" o tipo de pokemon selecionado no checkbox
+          if (personagem.type.includes(type)) { // determinamos se realmente o array contem o tipo de pokemon selecionado
+              pokeTipos.push(personagem) //retorna então adionando o pokemon selecionado ao array    
           }
           
       });     
      }
     personagens = pokeTipos 
-    carregarPokemon()
+    carregarPokemon() //coloca na tela o pokemon filtrado a partir da carregamento de todos os cards
     
 }
 
