@@ -1,3 +1,4 @@
+
 require("../src/data.js");
 
 describe("example", () => {
@@ -9,3 +10,7 @@ describe("example", () => {
     expect(example()).toBe("example");
   });
 });
+
+//filtrarPorTipo([{type:["fire", "poison"]}, 
+//{type:["grass", "water"]}, {type:["fire", "ice"]}], 
+//["fire"])

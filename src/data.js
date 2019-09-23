@@ -3,7 +3,6 @@
   return pokemon.filter(item => item.type.includes(types));
   
 }
-
 const app = {
   filtrarPorTipo
 };*/
@@ -15,34 +14,15 @@ function filtrarPorTipo(pokemon, types) {
         const type = types[i]; 
         pokemon.map(function (personagem){ //procura dentro do "for" o tipo de pokemon selecionado no checkbox
           if (personagem.type.includes(type)) { // determinamos se realmente o array contem o tipo de pokemon selecionado
-              pokeTipos.push(personagem) //retorna então adionando o pokemon selecionado ao array    
-          }
-          
+              pokeTipos.push(personagem) //retorna então adcionando o pokemon selecionado ao array    
+          }          
       });     
      }
     personagens = pokeTipos 
-    carregarPokemon() //coloca na tela o pokemon filtrado a partir da carregamento de todos os cards
-    
+    carregarPokemon() 
 }
 
-/*function filtrarPorTipo (types){
-    let pokeTipos = []
-    for (let i = 0; i < types.length; i++) {
-      const type = types[i]; 
-      personagens = POKEMON.pokemon;
-      personagens.map(function (personagem){
-          if (personagem.type.includes(type)) {
-              pokeTipos.push(personagem)         
-          }
-          
-      });     
-     }
-    personagens = pokeTipos 
-    carregarPokemon()
-  };*/
-
-
-  window.ordenPokemons = ordenPokemons;
+window.ordenPokemons = ordenPokemons;
 
 function ordenPokemons(orderPokemon) {
   const personagens = POKEMON.pokemon;
@@ -70,38 +50,30 @@ function ordenPokemons(orderPokemon) {
 };
 
 
-  //const ordenar = document.getElementById(ordenarPokemons);
- // ordenar.addEventListener('change', () => {
-     
-  
-  //});
-  
- 
-  //document.getElementById("pokeSearch").addEventListener('click', function () {
-  //    const getPokemon = () => {return {'pokemon'};
- // };
- //     console.log(getPokemon)
-  //});
-  
-  
-  
-  /*const personagensAgrupados = .reduce(function(
-    valorAcumulador, valorPokemon){   
-  if (valorPokemon.type === "fire") {
-    return valorAcumulador + valorPokemon.value;   
-  } 0;
-  console.log(personagensAgrupados)
-    });*/
-  
-  //valorAcumulador[typePoke].push(valorPokemon);
-  
-  //return valorAcumulador;
-    //}, {typefire: []});
+/*const pokeSoma = document.getElementsByClassName(type)
+. filtrarPorTipo(personagens => pokeSoma.type === "fire")
+.reduce((valorAcumulado,pokeSoma)=>{
+  if(valorAcumulado.type > pokeSoma.type){
+  return valorAcumulado;
+ } 
+ return pokeSoma;
+}, {"type": 0});
+console.log(pokeSoma)*/
+
+/*let pokeSoma = POKEMON.pokemon.reduce((contador, type) => Object.assign (contador, {["type"]:(contador ["type"] || 0) + 1}), {})
+console.log(pokeSoma)*/
+
+/*pokeSoma = personagens.reduce((total, elemento) => {
+  if (elemento.type === 'fire') return total += (elemento.type);
+  else return total}, []);
+  console.log(pokeSoma)*/
+
+  /*function somaPokemon() {
+    return personagens.reduce(function (soma, personagens) {
+      if (personagens.type ==="fire") return soma + personagens.type;
+      
+    },0)
     
-  
-  
-   // if(record.gender == 'BOYS') return sum + record.value; 
-///  }, 0);
-//}
-
-
+  }
+  console.log(somaPokemon)*/
+ 
