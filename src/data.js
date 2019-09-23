@@ -10,18 +10,18 @@ const app = {
 
 function filtrarPorTipo(pokemon, types) { 
   // 
-  let pokeTipos = [] // recebe/adiciona o pokemon filtrado
-    for (let i = 0; i < types.length; i++) { //entra no array que guarda os tipos de pokemon
-        const type = types[i]; 
-        pokemon.map(function (personagem){ //procura dentro do "for" o tipo de pokemon selecionado no checkbox
-          if (personagem.type.includes(type)) { // determinamos se realmente o array contem o tipo de pokemon selecionado
-              pokeTipos.push(personagem) //retorna então adionando o pokemon selecionado ao array    
-          }
+  let pokeTipos = []; // recebe/adiciona o pokemon filtrado
+  for (let i = 0; i < types.length; i++) { //entra no array que guarda os tipos de pokemon
+    const type = types[i]; 
+    pokemon.map(function (personagem) { //procura dentro do "for" o tipo de pokemon selecionado no checkbox
+      if (personagem.type.includes(type)) { // determinamos se realmente o array contem o tipo de pokemon selecionado
+        pokeTipos.push(personagem); //retorna então adionando o pokemon selecionado ao array    
+      }
           
-      });     
-     }
-    personagens = pokeTipos 
-    carregarPokemon() //coloca na tela o pokemon filtrado a partir da carregamento de todos os cards
+    });     
+  }
+  personagens = pokeTipos; 
+  carregarPokemon(); //coloca na tela o pokemon filtrado a partir da carregamento de todos os cards
     
 }
 
@@ -41,51 +41,45 @@ function filtrarPorTipo(pokemon, types) {
     carregarPokemon()
   };*/
 
-
-  window.ordenPokemons = ordenPokemons;
+window.ordenPokemons = ordenPokemons;
 
 function ordenPokemons(orderPokemon) {
   const personagens = POKEMON.pokemon;
   let orderList = [];
 
-  switch (orderPokemon){
+  switch (orderPokemon) {
   case "a-z": 
     personagens.sort((a, b) => {
-  if (a.name > b.name) {
-    return 1;
-  }
-  return -1;
-});
+      if (a.name > b.name) {
+        return 1;
+      }
+      return -1;
+    });
     break;
   case "z-a": 
     personagens.sort((a, b) => {
-  if (a.name > b.name) {
-    return 1;
-  }
-  return -1;
-});
+      if (a.name > b.name) {
+        return 1;
+      }
+      return -1;
+    });
     personagens.reverse();
     break;
- }
+  }
 };
 
-
-  //const ordenar = document.getElementById(ordenarPokemons);
- // ordenar.addEventListener('change', () => {
-     
+//const ordenar = document.getElementById(ordenarPokemons);
+// ordenar.addEventListener('change', () => {
   
-  //});
-  
+//});
  
-  //document.getElementById("pokeSearch").addEventListener('click', function () {
-  //    const getPokemon = () => {return {'pokemon'};
- // };
- //     console.log(getPokemon)
-  //});
+//document.getElementById("pokeSearch").addEventListener('click', function () {
+//    const getPokemon = () => {return {'pokemon'};
+// };
+//     console.log(getPokemon)
+//});
   
-  
-  
-  /*const personagensAgrupados = .reduce(function(
+/*const personagensAgrupados = .reduce(function(
     valorAcumulador, valorPokemon){   
   if (valorPokemon.type === "fire") {
     return valorAcumulador + valorPokemon.value;   
@@ -93,15 +87,12 @@ function ordenPokemons(orderPokemon) {
   console.log(personagensAgrupados)
     });*/
   
-  //valorAcumulador[typePoke].push(valorPokemon);
+//valorAcumulador[typePoke].push(valorPokemon);
   
-  //return valorAcumulador;
-    //}, {typefire: []});
-    
+//return valorAcumulador;
+//}, {typefire: []});
   
-  
-   // if(record.gender == 'BOYS') return sum + record.value; 
+// if(record.gender == 'BOYS') return sum + record.value; 
 ///  }, 0);
 //}
-
 

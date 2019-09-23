@@ -1,11 +1,11 @@
 require("../src/data.js");
 
-describe("example", () => {
-  it("is a function", () => {
-    expect(typeof example).toBe("function");
+describe("ordenPokemons", () => {
+  it("is a function",  () => {
+    expect(typeof app.ordenPokemons).toBe("function");
   });
 
-  it("returns `example`", () => {
+  it("returns `A-Z`", () => {
     expect(example()).toBe("example");
   });
 });

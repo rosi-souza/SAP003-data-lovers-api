@@ -2,11 +2,11 @@ let personagens = POKEMON.pokemon;
 
 function carregarPokemon() {
 
-    const showPokemons = document.getElementById("principal");
-    let layout = "";
-    showPokemons.innerHTML = "";
-    for (pokemons of personagens) {
-        layout += `
+  const showPokemons = document.getElementById("principal");
+  let layout = "";
+  showPokemons.innerHTML = "";
+  for (pokemons of personagens) {
+    layout += `
           <div id="pokemon" class="poke-card">
             <div class="infos">
               <img src ="${pokemons.img}"/>
@@ -20,40 +20,38 @@ function carregarPokemon() {
             </div>
           </div>`;
 
-    };
-    showPokemons.innerHTML = layout
+  };
+  showPokemons.innerHTML = layout;
 
 }
 
-carregarPokemon()
+carregarPokemon();
 
-
-document.getElementById("filter").addEventListener('click', function(){
-    const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element){ 
-      //foi criado um array no qual estão os pokemon filtrados, a partir do array onde estão todos os pokemon
-      //queryselectorall retornou uma lista com os elementos especificados(tipos checados pelo usuário)
-      // map foi chamado para buscar o tipo dentro desse novo array
-      return element.value
-    })
-    filtrarPorTipo(POKEMON.pokemon, types)    
+document.getElementById("filter").addEventListener("click", function() {
+  const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element) { 
+    //foi criado um array no qual estão os pokemon filtrados, a partir do array onde estão todos os pokemon
+    //queryselectorall retornou uma lista com os elementos especificados(tipos checados pelo usuário)
+    // map foi chamado para buscar o tipo dentro desse novo array
+    return element.value;
+  });
+  filtrarPorTipo(POKEMON.pokemon, types);    
        
-       }
-  );
+}
+);
 
-  document.getElementById("ordenarPokemons").addEventListener('change', function(){
-    const ordem = Array.from(document.querySelectorAll("#ordenarPokemons")).map(function (element){
-      return element.value
-    })
-    selectOrderPokemon(ordem)
-       }
-  );
+document.getElementById("ordenarPokemons").addEventListener("change", function() {
+  const ordem = Array.from(document.querySelectorAll("#ordenarPokemons")).map(function (element) {
+    return element.value;
+  });
+  selectOrderPokemon(ordem);
+}
+);
 
 function selectOrderPokemon() {
   let orderPokemon = document.getElementById("ordenarPokemons").value;
   let orderList = window.ordenPokemons(orderPokemon);
   carregarPokemon(orderList);
 }
-
 
 /*const pokeSoma = document.getElementsByClassName(type)
 . filtrarPorTipo(personagens => pokeSoma.type === "fire")
@@ -65,17 +63,14 @@ function selectOrderPokemon() {
 }, {"type": 0});
 console.log(pokeSoma)*/
 
-
 //let pokeSoma = personagens.reduce((contador, type) => Object.assign (contador, {["type"]:(contador ["type"] || 0) + 1}), {})
-
-
 
 /*pokeSoma = personagens.reduce((total, elemento) => {
   if (elemento.type === 'fire') return total += (elemento.type);
   else return total}, []);
   console.log(pokeSoma)*/
 
-  /*function somaPokemon() {
+/*function somaPokemon() {
     return personagens.reduce(function (soma, personagens) {
       if (personagens.type ==="fire") return soma + personagens.type;
       
@@ -83,16 +78,4 @@ console.log(pokeSoma)*/
     
   }
   console.log(somaPokemon)*/
- 
-
-
-
-
-
-
-
-
-
-
-
 
