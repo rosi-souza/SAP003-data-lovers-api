@@ -10,13 +10,12 @@ function carregarPokemon() {
           <div id="pokemon" class="poke-card">
             <div class="infos">
               <img src ="${pokemons.img}"/>
-              <div>
-                <p class="name">Pokemon:</p>
+              <div id = "name">
                 ${pokemons.name}
               </div>
-              <p>Tipo:</p>
+              <p class="subtitle">Tipo:</p>
               ${pokemons.type}
-              <p>Fraquezas:</p>
+              <p class="subtitle">Fraquezas:</p>
               ${pokemons.weaknesses}
             </div>
           </div>`;
