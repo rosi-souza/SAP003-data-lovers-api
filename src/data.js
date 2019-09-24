@@ -18,23 +18,45 @@ function filtrarPorTipo(pokemon, types) {
     const type = types[i]; 
     pokemon.map(function (personagem) { //procura dentro do "for" o tipo de pokemon selecionado no checkbox
       if (personagem.type.includes(type)) { // determinamos se realmente o array contem o tipo de pokemon selecionado
-        pokeTipos.push(personagem); //retorna então adcionando o pokemon selecionado ao array    
-      }          
+        pokeTipos.push(personagem); //retorna então adionando o pokemon selecionado ao array    
+      }
+          
     });     
   }
-  return pokeTipos;
-  //carregarPokemon() 
+  personagens = pokeTipos; 
+  carregarPokemon(); //coloca na tela o pokemon filtrado a partir da carregamento de todos os cards
+    
 }
 
-//ordenar pokemon
+/*function filtrarPorTipo (types){
+    let pokeTipos = []
+    for (let i = 0; i < types.length; i++) {
+      const type = types[i]; 
+      personagens = POKEMON.pokemon;
+      personagens.map(function (personagem){
+          if (personagem.type.includes(type)) {
+              pokeTipos.push(personagem)         
+          }
+          
+      });     
+     }
+    personagens = pokeTipos 
+    carregarPokemon()
+  };*/
 
-function ordenPokemons(orderPokemon) {
-  const personagens = POKEMON.pokemon;
+window.ordenPokemons = ordenPokemons;
+
+function ordenPokemons(orderPokemon, pokemons) {
+  // const personagens = POKEMON.pokemon;
   let orderList = [];
 
   switch (orderPokemon) {
   case "a-z": 
+<<<<<<< HEAD
+    pokemons.sort((a, b) => {
+=======
     personagens.sort((a, b) => {
+>>>>>>> 0c82e1bf22889feead3996312e7b97d0f4dcee6b
       if (a.name > b.name) {
         return 1;
       }
@@ -42,12 +64,52 @@ function ordenPokemons(orderPokemon) {
     });
     break;
   case "z-a": 
+<<<<<<< HEAD
+    pokemons.sort((a, b) => {
+=======
     personagens.sort((a, b) => {
+>>>>>>> 0c82e1bf22889feead3996312e7b97d0f4dcee6b
       if (a.name > b.name) {
         return 1;
       }
       return -1;
     });
+<<<<<<< HEAD
+    pokemons.reverse();
+    break;
+  }
+  return pokemons;
+};
+
+//const ordenar = document.getElementById(ordenarPokemons);
+// ordenar.addEventListener('change', () => {
+  
+//});
+ 
+//document.getElementById("pokeSearch").addEventListener('click', function () {
+//    const getPokemon = () => {return {'pokemon'};
+// };
+//     console.log(getPokemon)
+//});
+  
+/*const personagensAgrupados = .reduce(function(
+    valorAcumulador, valorPokemon){   
+  if (valorPokemon.type === "fire") {
+    return valorAcumulador + valorPokemon.value;   
+  } 0;
+  console.log(personagensAgrupados)
+    });*/
+  
+//valorAcumulador[typePoke].push(valorPokemon);
+  
+//return valorAcumulador;
+//}, {typefire: []});
+  
+// if(record.gender == 'BOYS') return sum + record.value; 
+///  }, 0);
+//}
+
+=======
     personagens.reverse();
     break;
   }
@@ -85,3 +147,4 @@ console.log(pokeSoma)*/
   }
   console.log(somaPokemon)*/
  
+>>>>>>> 0c82e1bf22889feead3996312e7b97d0f4dcee6b
