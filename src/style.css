@@ -40,6 +40,9 @@ body {
     font-size: 120%;
     opacity: 0.92;
      }  
+  .subtitle{
+    font-family: 'Fjalla One', sans-serif;
+  }
 
   .subtitle{
     font-family: 'Fjalla One', sans-serif;
@@ -73,6 +76,19 @@ body {
       background-color: rgba(255, 255, 255, 0.534);
       padding: 1%;
            
+      
+    }
+
+    h1{
+      color: black;
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 160%;
+    }
+
+    .poke-type{
+      font-family: 'Fjalla One', sans-serif;
+      color: white;
+      font-size: 130%;
     }
 
     h1{
