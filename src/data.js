@@ -43,13 +43,13 @@ function filtrarPorTipo(pokemon, types) {
 
 window.ordenPokemons = ordenPokemons;
 
-function ordenPokemons(orderPokemon) {
-  const personagens = POKEMON.pokemon;
+function ordenPokemons(orderPokemon, pokemons) {
+  // const personagens = POKEMON.pokemon;
   let orderList = [];
 
   switch (orderPokemon) {
   case "a-z": 
-    personagens.sort((a, b) => {
+    pokemons.sort((a, b) => {
       if (a.name > b.name) {
         return 1;
       }
@@ -57,15 +57,16 @@ function ordenPokemons(orderPokemon) {
     });
     break;
   case "z-a": 
-    personagens.sort((a, b) => {
+    pokemons.sort((a, b) => {
       if (a.name > b.name) {
         return 1;
       }
       return -1;
     });
-    personagens.reverse();
+    pokemons.reverse();
     break;
   }
+  return pokemons;
 };
 
 //const ordenar = document.getElementById(ordenarPokemons);

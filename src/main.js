@@ -49,7 +49,7 @@ document.getElementById("ordenarPokemons").addEventListener("change", function()
 
 function selectOrderPokemon() {
   let orderPokemon = document.getElementById("ordenarPokemons").value;
-  let orderList = window.ordenPokemons(orderPokemon);
+  let orderList = window.ordenPokemons(orderPokemon, personagens);
   carregarPokemon(orderList);
 }
 
