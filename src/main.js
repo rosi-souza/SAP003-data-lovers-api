@@ -1,6 +1,6 @@
 let personagens = POKEMON.pokemon;
 
-function carregarPokemon() {
+function carregarPokemon(personagens) {
 
   const showPokemons = document.getElementById("principal");
   let layout = "";
@@ -19,11 +19,24 @@ function carregarPokemon() {
               ${pokemons.weaknesses}
             </div>
           </div>`;
-
   };
   showPokemons.innerHTML = layout;
-
 }
+carregarPokemon(personagens);
+
+<<<<<<< HEAD
+  };
+  showPokemons.innerHTML = layout;
+=======
+//botão filtrar pokemon
+>>>>>>> 0c82e1bf22889feead3996312e7b97d0f4dcee6b
+
+document.getElementById("filter").addEventListener("click", function() {
+  const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element) { 
+    //foi criado um array, no qual estão os pokemon filtrados, a partir do array onde estão todos os pokemon
+    //queryselectorall retornou uma lista com os elementos especificados(tipos checados pelo usuário)
+    // map foi chamado para buscar o tipo dentro desse novo array
+    return element.value;
 
 carregarPokemon();
 
@@ -51,6 +64,7 @@ function selectOrderPokemon() {
   let orderPokemon = document.getElementById("ordenarPokemons").value;
   let orderList = window.ordenPokemons(orderPokemon, personagens);
   carregarPokemon(orderList);
+<<<<<<< HEAD
 }
 
 /*const pokeSoma = document.getElementsByClassName(type)
@@ -78,4 +92,7 @@ console.log(pokeSoma)*/
     
   }
   console.log(somaPokemon)*/
+=======
+};
+>>>>>>> 0c82e1bf22889feead3996312e7b97d0f4dcee6b
 

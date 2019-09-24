@@ -2,11 +2,14 @@
 /*function filtrarPorTipo(pokemon, types){
   return pokemon.filter(item => item.type.includes(types));
   
-}
+}*/
+window.app = {
+  filtrarPorTipo,
+  ordenPokemons,
+  computeStats,
+};
 
-const app = {
-  filtrarPorTipo
-};*/
+//filtrar pokemon
 
 function filtrarPorTipo(pokemon, types) { 
   // 
@@ -49,7 +52,11 @@ function ordenPokemons(orderPokemon, pokemons) {
 
   switch (orderPokemon) {
   case "a-z": 
+<<<<<<< HEAD
     pokemons.sort((a, b) => {
+=======
+    personagens.sort((a, b) => {
+>>>>>>> 0c82e1bf22889feead3996312e7b97d0f4dcee6b
       if (a.name > b.name) {
         return 1;
       }
@@ -57,12 +64,17 @@ function ordenPokemons(orderPokemon, pokemons) {
     });
     break;
   case "z-a": 
+<<<<<<< HEAD
     pokemons.sort((a, b) => {
+=======
+    personagens.sort((a, b) => {
+>>>>>>> 0c82e1bf22889feead3996312e7b97d0f4dcee6b
       if (a.name > b.name) {
         return 1;
       }
       return -1;
     });
+<<<<<<< HEAD
     pokemons.reverse();
     break;
   }
@@ -97,3 +109,42 @@ function ordenPokemons(orderPokemon, pokemons) {
 ///  }, 0);
 //}
 
+=======
+    personagens.reverse();
+    break;
+  }
+};
+
+/*function computeStats(data) {
+  return ((data.length*100)/151).toFixed(1);
+  }*/
+  
+
+/*const pokeSoma = document.getElementsByClassName(type)
+. filtrarPorTipo(personagens => pokeSoma.type === "fire")
+.reduce((valorAcumulado,pokeSoma)=>{
+  if(valorAcumulado.type > pokeSoma.type){
+  return valorAcumulado;
+ } 
+ return pokeSoma;
+}, {"type": 0});
+console.log(pokeSoma)*/
+
+/*const pokeSoma = POKEMON.pokemon.reduce((contador, types) => Object.assign (contador, {["type"]:(contador ["type"] || 0) + 1}), {})
+console.log(pokeSoma)*/
+
+/*pokeSoma = personagens.reduce((total, elemento) => {
+  if (elemento.type === 'fire') return total += (elemento.type);
+  else return total}, []);
+  console.log(pokeSoma)*/
+
+/*function somaPokemon() {
+    return personagens.reduce(function (soma, personagens) {
+      if (personagens.type ==="fire") return soma + personagens.type;
+      
+    },0)
+    
+  }
+  console.log(somaPokemon)*/
+ 
+>>>>>>> 0c82e1bf22889feead3996312e7b97d0f4dcee6b
