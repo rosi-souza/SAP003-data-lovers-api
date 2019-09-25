@@ -1,50 +1,31 @@
 
-/*function filtrarPorTipo(pokemon, types){
-  return pokemon.filter(item => item.type.includes(types));
-  
-}*/
 window.app = {
   filtrarPorTipo,
   ordenPokemons,
-  computeStats,
+  pokePorcentagem
 };
 
 //filtrar pokemon
 
 function filtrarPorTipo(pokemon, types) { 
-  // 
   let pokeTipos = []; // recebe/adiciona o pokemon filtrado
   for (let i = 0; i < types.length; i++) { //entra no array que guarda os tipos de pokemon
     const type = types[i]; 
     pokemon.map(function (personagem) { //procura dentro do "for" o tipo de pokemon selecionado no checkbox
       if (personagem.type.includes(type)) { // determinamos se realmente o array contem o tipo de pokemon selecionado
-        pokeTipos.push(personagem); //retorna então adionando o pokemon selecionado ao array    
-      }
-          
+        pokeTipos.push(personagem); //retorna então adicionando o pokemon selecionado ao array    
+      }          
     });     
   }
-  personagens = pokeTipos; 
-  carregarPokemon(); //coloca na tela o pokemon filtrado a partir da carregamento de todos os cards
+  console.log(pokeTipos)
+  return pokeTipos;
+  
+  //personagens = pokeTipos; 
+  //carregarPokemon(personagens); //coloca na tela o pokemon filtrado a partir da carregamento de todos os cards
     
 }
 
-/*function filtrarPorTipo (types){
-    let pokeTipos = []
-    for (let i = 0; i < types.length; i++) {
-      const type = types[i]; 
-      personagens = POKEMON.pokemon;
-      personagens.map(function (personagem){
-          if (personagem.type.includes(type)) {
-              pokeTipos.push(personagem)         
-          }
-          
-      });     
-     }
-    personagens = pokeTipos 
-    carregarPokemon()
-  };*/
-
-window.ordenPokemons = ordenPokemons;
+//ordenarpokemon
 
 function ordenPokemons(orderPokemon, pokemons) {
   // const personagens = POKEMON.pokemon;
@@ -72,31 +53,16 @@ function ordenPokemons(orderPokemon, pokemons) {
   return pokemons;
 };
 
-//const ordenar = document.getElementById(ordenarPokemons);
-// ordenar.addEventListener('change', () => {
-  
-//});
- 
-//document.getElementById("pokeSearch").addEventListener('click', function () {
-//    const getPokemon = () => {return {'pokemon'};
-// };
-//     console.log(getPokemon)
-//});
-  
-/*const personagensAgrupados = .reduce(function(
-    valorAcumulador, valorPokemon){   
-  if (valorPokemon.type === "fire") {
-    return valorAcumulador + valorPokemon.value;   
-  } 0;
-  console.log(personagensAgrupados)
-    });*/
-  
-//valorAcumulador[typePoke].push(valorPokemon);
-  
-//return valorAcumulador;
-//}, {typefire: []});
-  
-// if(record.gender == 'BOYS') return sum + record.value; 
-///  }, 0);
-//}
+//calcular pokemon
+
+function pokePorcentagem(data) {
+  console.log(data)
+  return ((data.length*100)/151).toFixed(1);
+}
+
+/*const total = data.type.reduce(
+  (accumulator, item) => {
+    console.log(data.type)
+    return accumulator + item.type, 0
+  });*/
 

@@ -23,8 +23,8 @@ function carregarPokemon(personagens) {
   showPokemons.innerHTML = layout;
 }
 carregarPokemon(personagens);
-  ;
-  showPokemons.innerHTML = layout;
+  
+  //showPokemons.innerHTML = layout;
 
 document.getElementById("filter").addEventListener("click", function() {
   const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element) { 
@@ -32,20 +32,18 @@ document.getElementById("filter").addEventListener("click", function() {
     //queryselectorall retornou uma lista com os elementos especificados(tipos checados pelo usuário)
     // map foi chamado para buscar o tipo dentro desse novo array
     return element.value;
-
-carregarPokemon();
-
-document.getElementById("filter").addEventListener("click", function() {
-  const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element) { 
-    //foi criado um array no qual estão os pokemon filtrados, a partir do array onde estão todos os pokemon
-    //queryselectorall retornou uma lista com os elementos especificados(tipos checados pelo usuário)
-    // map foi chamado para buscar o tipo dentro desse novo array
-    return element.value;
   });
-  filtrarPorTipo(POKEMON.pokemon, types);    
-       
-}
-);
+    filtrarPorTipo(POKEMON.pokemon, types);
+    const pokemonFiltrado = app.filtrarPorTipo(POKEMON.pokemon, types);
+
+    //console.log(pokemonFiltrado)
+    carregarPokemon(pokemonFiltrado);
+    console.log(pokePorcentagem(pokemonFiltrado));  
+
+    //console.log(pokePorcentagem(pokemonFiltrado));
+  });
+
+
 
 document.getElementById("ordenarPokemons").addEventListener("change", function() {
   const ordem = Array.from(document.querySelectorAll("#ordenarPokemons")).map(function (element) {
