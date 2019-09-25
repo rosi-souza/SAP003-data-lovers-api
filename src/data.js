@@ -17,7 +17,7 @@ function filtrarPorTipo(pokemon, types) {
       }          
     });     
   }
-  console.log(pokeTipos)
+  console.log(pokeTipos);
   return pokeTipos;
   
   //personagens = pokeTipos; 
@@ -56,7 +56,7 @@ function ordenPokemons(orderPokemon, pokemons) {
 //calcular pokemon
 
 function pokePorcentagem(data) {
-  console.log(data)
+  //console.log(data);
   return ((data.length*100)/151).toFixed(1);
 }
 
