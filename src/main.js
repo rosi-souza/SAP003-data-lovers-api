@@ -1,33 +1,32 @@
 let personagens = POKEMON.pokemon;
 
-function carregarPokemon(personagens) {
+function carregarPokemon(pokemons) {
+  personagens = pokemons;
 
   const showPokemons = document.getElementById("principal");
   let layout = "";
   showPokemons.innerHTML = "";
-  for (pokemons of personagens) {
+  for (pokemon of pokemons) {
     layout += `
           <div id="pokemon" class="poke-card">
             <div class="infos">
-              <img src ="${pokemons.img}"/>
+              <img src ="${pokemon.img}"/>
               <div id = "name">
-                ${pokemons.name}
+                ${pokemon.name}
               </div>
               <p class="subtitle">Tipo:</p>
-              ${pokemons.type}
+              ${pokemon.type}
               <p class="subtitle">Fraquezas:</p>
-              ${pokemons.weaknesses}
+              ${pokemon.weaknesses}
             </div>
           </div>`;
   };
   showPokemons.innerHTML = layout;
 }
 carregarPokemon(personagens);
-  
-//showPokemons.innerHTML = layout;
 
 document.getElementById("filter").addEventListener("click", function() {
-  const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element) { 
+  const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element) {
     //foi criado um array, no qual estão os pokemon filtrados, a partir do array onde estão todos os pokemon
     //queryselectorall retornou uma lista com os elementos especificados(tipos checados pelo usuário)
     // map foi chamado para buscar o tipo dentro desse novo array
@@ -36,11 +35,8 @@ document.getElementById("filter").addEventListener("click", function() {
   filtrarPorTipo(POKEMON.pokemon, types);
   const pokemonFiltrado = app.filtrarPorTipo(POKEMON.pokemon, types);
 
-  //console.log(pokemonFiltrado)
   carregarPokemon(pokemonFiltrado);
-  //console.log(pokePorcentagem(pokemonFiltrado));  
-
-  //console.log(pokePorcentagem(pokemonFiltrado));
+  
 });
 
 document.getElementById("ordenarPokemons").addEventListener("change", function() {
@@ -56,4 +52,14 @@ function selectOrderPokemon() {
   let orderList = window.ordenPokemons(orderPokemon, personagens);
   carregarPokemon(orderList);
 }
+
+function showTypes() {
+  let qtTypes = app.pokeCalc(personagens);
+  for (tipo in qtTypes) {
+    document.getElementById("type"+tipo).innerHTML = qtTypes[tipo];
+  }
+
+}
+
+showTypes();
 

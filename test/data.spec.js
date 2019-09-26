@@ -103,15 +103,25 @@ describe("filtrarPorTipo", () => {
   });
 });
 
-describe("porcentagemPokemon", () => {
+/*describe("porcentagemPokemon", () => {
   it("is a function", () => {
     expect(typeof app.pokePorcentagem).toBe("function");
 
     it("returns `porcentagem pokemons`", () => {
       expect(app.pokePorcentagem(app.filtrarPorTipo bancoPokemons, "Fire")).toBe([{(2*100)/5
-     
+
       }
     ]
     );
     });});
+  });*/
+
+describe("pokeCalc", () => {
+  it("is a function", () => {
+    expect(typeof app.pokeCalc).toBe("function");
   });
+
+  it("returns `numero de pokemons por tipo`", () => {
+    expect(app.pokeCalc(bancoPokemons, "numero de pokemons por tipo")).toEqual({Grass: 3, Poison: 3, Fire: 2});
+  });
+});
