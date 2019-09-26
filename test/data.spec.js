@@ -116,11 +116,12 @@ describe("filtrarPorTipo", () => {
     });});
   });*/
 
-  describe("pokeCalc", () => {
-    it("is a function", () => {
-      expect(typeof app.pokeCalc).toBe("function");
-    });
+describe("pokeCalc", () => {
+  it("is a function", () => {
+    expect(typeof app.pokeCalc).toBe("function");
+  });
 
-    it("returns `numero de pokemons por tipo`", () => {
-      expect(app.pokeCalc(bancoPokemons, countTypes)).toEqual({Grass:3;Poison:3;Fire:2});
-      });
+  it("returns `numero de pokemons por tipo`", () => {
+    expect(app.pokeCalc(bancoPokemons, "numero de pokemons por tipo")).toEqual({Grass: 3, Poison: 3, Fire: 2});
+  });
+});

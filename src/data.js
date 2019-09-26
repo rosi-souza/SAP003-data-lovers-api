@@ -2,7 +2,6 @@
 window.app = {
   filtrarPorTipo,
   ordenPokemons,
-  //pokePorcentagem,
   pokeCalc
 };
 
@@ -18,18 +17,13 @@ function filtrarPorTipo(pokemon, types) {
       }
     });
   }
-  console.log(pokeTipos);
   return pokeTipos;
-
-  //personagens = pokeTipos;
-  //carregarPokemon(personagens); //coloca na tela o pokemon filtrado a partir da carregamento de todos os cards
 
 }
 
 //ordenarpokemon
 
 function ordenPokemons(orderPokemon, pokemons) {
-  // const personagens = POKEMON.pokemon;
   let orderList = [];
 
   switch (orderPokemon) {
@@ -54,33 +48,19 @@ function ordenPokemons(orderPokemon, pokemons) {
   return pokemons;
 };
 
-//calcular pokemon
+//Calcula quantos pokemons tem em cada tipo
 
-/*function pokePorcentagem(data) {
-  //console.log(data);
-  return ((data.length*100)/151).toFixed(1);
-}*/
-
-/*const total = data.type.reduce(
-  (accumulator, item) => {
-    console.log(data.type)
-    return accumulator + item.type, 0
-  });*/
-
-  function pokeCalc(){
-    let pokes = POKEMON.pokemon;
-    let countTypes = pokes.reduce(function (acumulador, pokemon){
-      // pokemon.type => array
-      for (tipoPokemon of pokemon.type){
-        if (tipoPokemon in acumulador){
-          acumulador[tipoPokemon]++;
-        } else {
-          acumulador[tipoPokemon]=1
-        }
+function pokeCalc(pokeData) {
+  let countTypes = pokeData.reduce(function (acumulador, pokemon) {
+    for (tipoPokemon of pokemon.type) {
+      if (tipoPokemon in acumulador) {
+        acumulador[tipoPokemon]++;
+      } else {
+        acumulador[tipoPokemon]=1;
       }
+    }
 
-      return acumulador;
-    },{});
-    return countTypes;
-    console.log (countTypes);
-  };
+    return acumulador;
+  }, {});
+  return countTypes;
+};

@@ -25,8 +25,6 @@ function carregarPokemon(pokemons) {
 }
 carregarPokemon(personagens);
 
-//showPokemons.innerHTML = layout;
-
 document.getElementById("filter").addEventListener("click", function() {
   const types = Array.from(document.querySelectorAll(".type:checked")).map(function (element) {
     //foi criado um array, no qual estão os pokemon filtrados, a partir do array onde estão todos os pokemon
@@ -37,11 +35,8 @@ document.getElementById("filter").addEventListener("click", function() {
   filtrarPorTipo(POKEMON.pokemon, types);
   const pokemonFiltrado = app.filtrarPorTipo(POKEMON.pokemon, types);
 
-  //console.log(pokemonFiltrado)
   carregarPokemon(pokemonFiltrado);
-  //console.log(pokePorcentagem(pokemonFiltrado));
-
-  //console.log(pokePorcentagem(pokemonFiltrado));
+  
 });
 
 document.getElementById("ordenarPokemons").addEventListener("change", function() {
@@ -58,13 +53,13 @@ function selectOrderPokemon() {
   carregarPokemon(orderList);
 }
 
-function showTypes(){
-  let qtTypes = app.pokeCalc();
-  for (tipo in qtTypes){
-   document.getElementById("type"+tipo).innerHTML = qtTypes[tipo];
+function showTypes() {
+  let qtTypes = app.pokeCalc(personagens);
+  for (tipo in qtTypes) {
+    document.getElementById("type"+tipo).innerHTML = qtTypes[tipo];
   }
 
-  //console.log(qtTypes);
 }
 
 showTypes();
+
