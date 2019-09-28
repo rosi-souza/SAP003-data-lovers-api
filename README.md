@@ -1,12 +1,6 @@
-# Data Lovers (DashBoard  ![alt text](http://secureservercdn.net/198.71.233.106/990.175.myftpupload.com/wp-content/uploads/2017/09/Pokemon.jpg))
+# Data Lovers (DashBoard Project) ![alt text](http://secureservercdn.net/198.71.233.106/990.175.myftpupload.com/wp-content/uploads/2017/09/Pokemon.jpg)
 
 
-## Índice
-
-
-* [Resumo do projeto]
-* [Considerações técnicas]
-* [Checklist]
 
 
 ***
