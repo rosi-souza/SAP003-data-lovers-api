@@ -16,8 +16,10 @@
 
 
 Neste projeto construimos uma _página web_responsiva_,para visualizar um conjunto (set) de dados do tema:
- * [Pokémon](src/data/pokemon/pokemon.json):que fornece uma lista com os 151 Pokémon da região de
+
+* [Pokémon](src/data/pokemon/pokemon.json):que fornece uma lista com os 151 Pokémon da região de
 Kanto, com suas respectivas estatísticas utilizadas no jogo [Pokémon GO](http://pokemongolive.com).
+
 O projeto visou adequar-se às necessidades dos usuários, conforme suas histórias, permitindo aos mesmos **visualizar dados,filtrá-los, ordená-los e fazer algum cálculo agregado**
 Por cálculo agregado nos referimos aos diversos cálculos que podemos fazer com os dados para mostrar a informação mais relevante para os usuários (médias, valores máximos e míimos,etc), neste caso mostramos ao usuário a quantidade de pokémons existente dentro de cada tipo (fogo, água, pedra, etc..).
 
@@ -38,10 +40,6 @@ Optamos por inserir no logo (POKEMON) um link que retorna à página inicial do 
 
 ### Histórias de usuário
 
-
-História de Usuários
-
-
 1. Como namorada de um geek eu quero ver as imagens dos pokémons para entender o que são e poder associar os nomes aos “bichinhos”
 
 2. Como jogador de pokémon Go eu quero poder filtrar os pokémons que aparecem na tela por tipo para saber quais pokémons de determinado tipo faltam para a minha coleção
@@ -56,7 +54,8 @@ História de Usuários
 ## Considerações técnicas
 
 
-A lógica do projeto foi implementada somente em JavaScript (ES6), HTML e CSS. Sem o uso de bibliotecas e frameworks, apenas [vanilla JavaScript].
+A lógica do projeto foi implementada somente em JavaScript (ES6), HTML e CSS.
+Sem o uso de bibliotecas e frameworks, apenas [vanilla JavaScript].
 Não utilizou-se _pseudo-variável_ `this`.
 A aplicação passou nos testes unitários (elaborados no arquivo test/data.spec.js )das funções implementadas no arquivo `data.js`.
 
