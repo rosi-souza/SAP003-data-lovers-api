@@ -1,4 +1,4 @@
-# Data Lovers (DashBoard Project) ![alt text](http://secureservercdn.net/198.71.233.106/990.175.myftpupload.com/wp-content/uploads/2017/09/Pokemon.jpg)
+# Data Lovers (DashBoard Project) ![Pokemon](http://secureservercdn.net/198.71.233.106/990.175.myftpupload.com/wp-content/uploads/2017/09/Pokemon.jpg)
 
 
 
@@ -25,10 +25,10 @@ Por cálculo agregado nos referimos aos diversos cálculos que podemos fazer com
 Durante o processo de criação da aplicação fizemos em um primeiro momento rascunhos em lápis e papel, e questionamos as necessidades/informações básicas que o usuário tem.
 Definimos o produto a partir de um usuário que gostaria de ter acesso rápido e claro à informações básicas sobre os pokemon, sendo este o principal benefício para os jogadores/caçadores do "pokemon go".Ou seja, ao utilizar o site o usuário terá acesso as imagens dos pokémons em forma de cards contendo seus nomes, tipos e fraquezas.
 
-![](https://github.com/elaineshimabukuro/SAP003-data-lovers/blob/elaine-readme/img/img/1  prototipo-img.jpeg)
-![](https://github.com/elaineshimabukuro/SAP003-data-lovers/blob/elaine-readme/img/2prototipo-img.jpeg)
-![](https://github.com/elaineshimabukuro/SAP003-data-lovers/blob/elaine-readme/img/3prototipo-img.jpeg)
-![](https://github.com/elaineshimabukuro/SAP003-data-lovers/blob/elaine-readme/img/4prototipo-img.jpeg)
+![Protótipo 1](https://github.com/elaineshimabukuro/SAP003-data-lovers/blob/elaine-readme/img/1.prototipo-img.jpeg)
+![Protótipo 2](https://github.com/elaineshimabukuro/SAP003-data-lovers/blob/elaine-readme/img/2.prototipo-img.jpeg)
+![Protótipo 3](https://github.com/elaineshimabukuro/SAP003-data-lovers/blob/elaine-readme/img/3.prototipo-img.jpeg)
+![Protótipo 4](https://github.com/elaineshimabukuro/SAP003-data-lovers/blob/elaine-readme/img/4.prototipo-img.jpeg)
 
 Durante os testes de usuabilidade encontramos o seguinte problema:
 1. Após filtrar ou ordenar os dados, como o usuário conseguiria retornar a lista de dados inicial, aonde os pokémons aparecem conforme o ID?
