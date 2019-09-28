@@ -1,4 +1,4 @@
-# Data Lovers (DashBoard Pokémon)
+# Data Lovers (DashBoard  ![alt text](http://secureservercdn.net/198.71.233.106/990.175.myftpupload.com/wp-content/uploads/2017/09/Pokemon.jpg))
 
 
 ## Índice
@@ -54,9 +54,10 @@ Optamos por inserir no logo (POKEMON) um link que retorna à página inicial do 
 ## Considerações técnicas
 
 
-A lógica do projeto foi implementada somente em JavaScript (ES6), HTML e CSS.
-Sem o uso de bibliotecas e frameworks, apenas [vanilla JavaScript].
+A lógica do projeto foi implementada somente em JavaScript (ES6), HTML e CSS, sem o uso de bibliotecas e frameworks, apenas [vanilla JavaScript].
+
 Não utilizou-se _pseudo-variável_ `this`.
+
 A aplicação passou nos testes unitários (elaborados no arquivo test/data.spec.js )das funções implementadas no arquivo `data.js`.
 
 
