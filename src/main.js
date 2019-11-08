@@ -1,6 +1,6 @@
 // let personagens = POKEMON.pokemon;
 const showPokemons = document.getElementById("principal");
-
+//front_default
 const getPokemon = () => {
   let layout = "";
   showPokemons.innerHTML = "";
@@ -8,23 +8,38 @@ const getPokemon = () => {
     .then(response => response.json())
     .then((data) => {
       const dataBase = data.results;
-      dataBase.map(x => {
+      dataBase.forEach(x => {
+        // console.log(x.url);
+        fetch(x.url)
+          .then(response => response.json())
+          .then((data) => {
+            //console.log("base de dados imagem", data.sprites);
+            const baseImg = data.sprites;
+           // console.log("imagem", baseImg.front_default );
+            let image = baseImg.front_default;
+            console.log(image);
+            const arrayType = data.types.map(x => x.type);
+            const type = arrayType.map(y => y.name);
+            console.log(type);
+            // console.log(a.type.name);
+          });
         layout += `
             <div id="pokemon" class="poke-card">
               <div class="infos">
+                <img src =""/>
                 <div id = "name">
                   ${x.name}
+                </div>
+                <p class="subtitle">Tipo:</p>
+                <p class="subtitle">Fraquezas:</p>
               </div>
-              <p class="subtitle">Tipo:</p>
-              <p class="subtitle">Fraquezas:</p>
-            </div>
-          `;
-        showPokemons.innerHTML = layout;
+            </div> 
+         `;
       });
+      showPokemons.innerHTML = layout;
     });
 };
 
-// <p> ${dataBase.map(x => x.name)} </p>
 getPokemon();
 
 // function carregarPokemon(pokemons) {
